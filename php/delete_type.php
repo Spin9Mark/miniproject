@@ -3,16 +3,14 @@
 include("connect.php");
 
 // รับข้อมูล
-$plId = $_GET["pl_id"];
+$typeId = $_GET["type_id"];
 
-// echo "$plId";
-
-$sql = "DELETE FROM polices WHERE pl_id = '$plId' ";
+$sql = "DELETE FROM model_types WHERE type_id = '$typeId' ";
 
 $result = mysqli_query($connection, $sql);
 
 if($result){
-    header("location:../police.php");
+    header("location:../model_types.php");
     exit();
 }else{
     echo "Error!";

@@ -3,16 +3,16 @@
 include("connect.php");
 
 // รับข้อมูล
-$csId = $_GET["cs_id"];
+$country_id = $_GET["country_id"];
 
-// echo "$csId";
 
-$sql = "DELETE FROM case_types WHERE cs_id = '$csId' ";
+
+$sql = "DELETE FROM countries WHERE country_id = '$country_id' ";
 
 $result = mysqli_query($connection, $sql);
 
 if($result){
-    header("location:../case_type.php");
+    header("location:../country.php");
     exit();
 }else{
     echo "Error!";

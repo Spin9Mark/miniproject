@@ -3,16 +3,16 @@
 include("connect.php");
 
 // รับข้อมูล
-$cId = $_GET["c_id"];
+$mdId = $_GET["model_id"];
 
-// echo "$cId";
+// echo "$pdId";
 
-$sql = "DELETE FROM sufferers WHERE c_id = '$cId' ";
+$sql = "DELETE FROM airplanes WHERE model_id = '$mdId' ";
 
 $result = mysqli_query($connection, $sql);
 
 if($result){
-    header("location:../sufferer.php");
+    header("location:../airplane.php");
     exit();
 }else{
     echo "Error!";

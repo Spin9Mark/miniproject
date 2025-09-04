@@ -3,16 +3,14 @@
 include("connect.php");
 
 // รับข้อมูล
-$pdId = $_GET["pd_id"];
+$orId = $_GET["order_id"];
 
-// echo "$pdId";
-
-$sql = "DELETE FROM police_diaries WHERE pd_id = '$pdId' ";
+$sql = "DELETE FROM orders WHERE order_id = '$orId' ";
 
 $result = mysqli_query($connection, $sql);
 
 if($result){
-    header("location:../police_diary.php");
+    header("location:../order.php");
     exit();
 }else{
     echo "Error!";
