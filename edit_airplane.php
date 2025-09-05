@@ -12,17 +12,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 
     <style>
-        html, body {
-            height: 100%;
-            margin: 0;
-        }
-
         body {
-            min-height: 100vh;
             background: linear-gradient(135deg, #0d1b2a, #1b263b, #415a77);
             color: #e0e1dd;
             font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-            background-attachment: fixed;
         }
 
         .card {
@@ -30,7 +23,6 @@
             background: rgba(255, 255, 255, 0.05);
             border: 1px solid rgba(255, 255, 255, 0.2);
             backdrop-filter: blur(6px);
-            color: #e0e1dd;
         }
 
         .card-header {
@@ -40,7 +32,11 @@
             border-radius: 1rem 1rem 0 0 !important;
         }
 
-        .form-label {
+        .card-header h2 {
+            margin: 0;
+        }
+
+        label {
             font-weight: 600;
             color: #e0e1dd;
         }
@@ -58,13 +54,14 @@
             box-shadow: none;
         }
 
+        option {
+            color: #000; /* หรือ #e0e1dd สำหรับพื้นหลังเข้ม */
+            background-color: #fff; /* หรือสีอ่อนเพื่อให้เห็นชัด */
+        }
+
         .form-control::placeholder{
             color: #836b6bff;
             /* opacity: 1; */
-        }
-
-        option {
-            color: #000; /* dropdown options อ่านง่าย */
         }
 
         .btn-primary {
